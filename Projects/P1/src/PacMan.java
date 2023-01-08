@@ -22,6 +22,46 @@ public class PacMan {
   }
 
   public boolean is_ghost_in_range() {
+    Location tmp_loc = new Location(myLoc.x - 1, myLoc.y - 1);
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+    tmp_loc.x += 1;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+
+    tmp_loc.x += 1;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+
+    tmp_loc.x -= 2;
+    tmp_loc.y += 1;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+
+    tmp_loc.x += 2;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+
+    tmp_loc.x -= 2;
+    tmp_loc.y += 1;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+
+    tmp_loc.x += 1;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
+
+    tmp_loc.x += 1;
+    if(myMap.getLoc(tmp_loc).contains(Map.Type.GHOST)) {
+      return true;
+    }
     return false;
   }
 
