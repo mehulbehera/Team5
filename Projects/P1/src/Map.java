@@ -63,22 +63,29 @@ public class Map {
   }
 
   public boolean attack(String Name) {
-    Location tmp_loc = new Location(locations.get(Name).x, locations.get(Name).y - 1);
+    Location tmp_loc = new Location(locations.get(Name).x - 1, locations.get(Name).y - 1);
     if(getLoc(tmp_loc).contains(Type.PACMAN)) {
         move(Name, tmp_loc, Type.GHOST);
         gameOver = true;
         return true;
     }
 
-    tmp_loc.y += 2;
+    tmp_loc.x += 1;
     if(getLoc(tmp_loc).contains(Type.PACMAN)) {
         move(Name, tmp_loc, Type.GHOST);
         gameOver = true;
         return true;
-    } 
+    }
 
-    tmp_loc.y -= 1;
-    tmp_loc.x -= 1;
+    tmp_loc.x += 1;
+    if(getLoc(tmp_loc).contains(Type.PACMAN)) {
+      move(Name, tmp_loc, Type.GHOST);
+      gameOver = true;
+      return true;
+    }
+
+    tmp_loc.x -= 2;
+    tmp_loc.y += 1;
     if(getLoc(tmp_loc).contains(Type.PACMAN)) {
         move(Name, tmp_loc, Type.GHOST);
         gameOver = true;
@@ -90,7 +97,29 @@ public class Map {
         move(Name, tmp_loc, Type.GHOST);
         gameOver = true;
         return true;
-    }  
+    }
+
+    tmp_loc.x -= 2;
+    tmp_loc.y += 1;
+    if(getLoc(tmp_loc).contains(Type.PACMAN)) {
+      move(Name, tmp_loc, Type.GHOST);
+      gameOver = true;
+      return true;
+    }
+
+    tmp_loc.x += 1;
+    if(getLoc(tmp_loc).contains(Type.PACMAN)) {
+      move(Name, tmp_loc, Type.GHOST);
+      gameOver = true;
+      return true;
+    }
+
+    tmp_loc.x += 1;
+    if(getLoc(tmp_loc).contains(Type.PACMAN)) {
+      move(Name, tmp_loc, Type.GHOST);
+      gameOver = true;
+      return true;
+    }
     return false;
   }
 
