@@ -63,56 +63,8 @@ public class Map {
   }
 
   public boolean attack(String Name) {
-    Location tmp_loc = new Location(locations.get(Name).x - 1, locations.get(Name).y - 1);
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-        gameOver = true;
-        return true;
-    }
-
-    tmp_loc.x += 1;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-        gameOver = true;
-        return true;
-    }
-
-    tmp_loc.x += 1;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-      gameOver = true;
-      return true;
-    }
-
-    tmp_loc.x -= 2;
-    tmp_loc.y += 1;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-        gameOver = true;
-        return true;
-    }
-
-    tmp_loc.x +=2;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-        gameOver = true;
-        return true;
-    }
-
-    tmp_loc.x -= 2;
-    tmp_loc.y += 1;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-      gameOver = true;
-      return true;
-    }
-
-    tmp_loc.x += 1;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-      gameOver = true;
-      return true;
-    }
-
-    tmp_loc.x += 1;
-    if(field.get(tmp_loc).contains(Type.PACMAN)) {
-      gameOver = true;
-      return true;
-    }
-    return false;
+    gameOver = true;
+    return true;
   }
 
   public JComponent eatCookie(String name) {
