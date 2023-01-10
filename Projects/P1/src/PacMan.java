@@ -25,6 +25,7 @@ public class PacMan {
 	myMap.move(myName, myLoc, Map.TYPE.PACMAN);
 	return true;
     }
+
   }
 
   public boolean is_ghost_in_range() {
