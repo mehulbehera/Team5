@@ -21,6 +21,8 @@ public class PacMan {
     if (get_valid_moves.isEmpty()){
 	return false;
     }else{
+	myLoc = get_valid_moves(0);
+	myMap.move("pacman", myLoc, Map.TYPE.PACMAN);
 	return true;
     }
   }
