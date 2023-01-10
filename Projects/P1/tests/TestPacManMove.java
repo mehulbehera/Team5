@@ -8,4 +8,5 @@ public class TestPacManMove extends TestCase {
   PacMan pacman = frame.addPacMan(new Location(3, 4));
   assertTrue(pacman.move(3,3) == false);
   assertTrue(p.move(4,4) == true);
+
 }
