@@ -19,7 +19,9 @@ public class Ghost {
     if (get_valid_moves.isEmpty()){
 	return false;
     }else{
-	return true;
+        myLoc = get_valid_moves(0);
+        myMap.move("ghost", myLoc, Map.TYPE.GHOST);
+        return true;
     }
   }
 
