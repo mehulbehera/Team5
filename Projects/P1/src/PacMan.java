@@ -18,7 +18,13 @@ public class PacMan {
   }
 
   public boolean move() {
-    return false;
+    if (get_valid_moves.isEmpty()){
+	    return false;
+    }else{
+      myLoc = get_valid_moves.get(0);
+      myMap.move(myName, myLoc, Map.TYPE.PACMAN);
+      return true;
+    }
   }
 
   public boolean is_ghost_in_range() {
