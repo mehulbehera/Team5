@@ -9,7 +9,7 @@ public class TestMapAttack extends TestCase {
     try {
       MainFrame frame1 = new MainFrame();
       assertTrue(frame1.getMap().attack("clyde"));
-      aasertTrue(frame1.isGameOver());
+      aasertTrue(frame1.getMap().isGameOver());
 
     } catch (FileNotFoundException e) {
       throw new RuntimeException(e);
