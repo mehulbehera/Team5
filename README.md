@@ -1,6 +1,6 @@
 # cmsc389T-winter23
 Project 1- Pacman
-Group Members: Sonia Sandler,
+Group Members: Sonia Sandler, Janaki Patel
 
 Pacman screenshot:
 
