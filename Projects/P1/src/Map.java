@@ -54,7 +54,15 @@ public class Map {
   public boolean move(String name, Location loc, Type type) {
     // update locations, components, and field
     // use the setLocation method for the component to move it to the new location
-    return false;
+    if (type == Type.GHOST || type == Type.PACMAN) {
+      locations.put(name, loc);
+      components.get(name).setLocation(loc.x, loc.y);
+      field.put(loc, new HashSet<Type>());
+    } else {
+      return false;
+    }
+
+    return true;
   }
 
   public HashSet<Type> getLoc(Location loc) {
