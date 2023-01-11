@@ -7,6 +7,7 @@ Pacman screenshot:
 Running the game:
 
 Functions
+
 Pacman:
 1. get_valid_moves()
 2. move() - This function uses get_valid_moves() and checks if it is empty. If it is it returns false and if it isn't it returns true. The test adds a cookie and pacman to the frame and asserts that the pacman has space to move.
