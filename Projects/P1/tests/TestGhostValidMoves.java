@@ -22,7 +22,7 @@ public class TestGhostValidMoves extends TestCase {
     lst.add(new Location(3, 5));
 
 
-    assertTrue(ghost.get_valid_moves(), lst);
+    assertEquals(ghost.get_valid_moves(), lst);
   }
 
   public void testGhostInvalidMoves() throws FileNotFoundException {
@@ -41,6 +41,6 @@ public class TestGhostValidMoves extends TestCase {
     lst.add(new Location(5, 5));
 
 
-    assertFalse(ghost.get_valid_moves(), lst);
+    assertFalse((ghost.get_valid_moves()).equals(lst));
   }
 }
