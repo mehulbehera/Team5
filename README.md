@@ -6,9 +6,10 @@ Pacman screenshot:
 
 Running the game:
 ``` java
-javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore your_test_here
-ex: java -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostMove
+
+javac -cp "src/" src/*.java
+java -cp "src/" StartMenu
+
 ```
 
 Functions
