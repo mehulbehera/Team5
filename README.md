@@ -6,21 +6,21 @@ Pacman screenshot:
 
 Running the game:
 
-Functions:
+Functions
 Pacman:
 1. get_valid_moves()
 2. move()
 3. is_ghost_in_range()
-4.
+4. consume()
 
-Ghost:
-1.
-2.
-3.
-4.
+Ghost
+1. get_valid_moves()
+2. move()
+3. is_pacman_in_range()
+4. attack()
 
-Map:
-1.
-2.
-3.
-4.
+Map
+1. move(String name, Location loc, Type type)
+2. getLoc(Location loc)
+3. attack(String name)
+4. eatCookie(String Name)
