@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import javax.swing.JComponent;
 
+
+
 public class PacMan {
   String myName;
   Location myLoc;
@@ -52,6 +54,12 @@ public class PacMan {
   }
 
   public JComponent consume() {
-    return null;
+     Map.Type cookieType = Map.Type.COOKIE;
+     
+    if (myMap.getLoc(myLoc).contains(cookieType)) {
+      return myMap.eatCookie(myName);
+    } else {
+      return null;
+    }
   }
 }
