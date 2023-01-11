@@ -38,7 +38,7 @@ public class PacMan {
 	    return false;
     }else{
       myLoc = get_valid_moves().get(0);
-      myMap.move(myName, myLoc, Map.TYPE.PACMAN);
+      myMap.move(myName, myLoc, Map.Type.PACMAN);
       return true;
     }
   }
