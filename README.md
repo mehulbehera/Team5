@@ -9,7 +9,7 @@ Running the game:
 
 javac -cp "src/" src/*.java
 java -cp "src/" StartMenu
-[embed]https://drive.google.com/file/d/1GudY-oOc1pL9ftPjh9lTAjesRn4_NwKx/view?usp=sharing[/embed]
+[embed]https://drive.google.com/file/d/1GudY-oOc1pL9ftPjh9lTAjesRn4_NwKx/view?usp=sharing.pdf[/embed]
 ```
 
 Functions
