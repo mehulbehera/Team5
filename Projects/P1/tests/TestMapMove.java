@@ -1,13 +1,13 @@
 import java.io.*;
+import java.awt.*;
 
-import Map.Type;
 import junit.framework.*;
 
 public class TestMapMove extends TestCase {
 
   public void testMapMove() throws FileNotFoundException {
     //Creating A Map
-    Mainframe frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(4, 5), "name", Color.red); //Creates a red ghost named "name" at location x,y
@@ -24,7 +24,7 @@ public class TestMapMove extends TestCase {
 
   public void testMapNoMove() throws FileNotFoundException {
     //Creating A Map
-    Mainframe frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(4, 5), "name", Color.red); //Creates a red ghost named "name" at location x,y
