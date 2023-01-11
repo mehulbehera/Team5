@@ -3,13 +3,14 @@ Project 1- Pacman
 Group Members: Sonia Sandler, Janaki Patel, Roshan Mathew
 
 Pacman screenshot:
+![alt text](https://drive.google.com/file/d/1GudY-oOc1pL9ftPjh9lTAjesRn4_NwKx/view?usp=sharing).
 
 Running the game:
 ``` java
 
 javac -cp "src/" src/*.java
 java -cp "src/" StartMenu
-![alt text](https://drive.google.com/file/d/1GudY-oOc1pL9ftPjh9lTAjesRn4_NwKx/view?usp=sharing).
+
 ```
 
 Functions
