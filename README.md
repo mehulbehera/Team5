@@ -10,6 +10,8 @@ Running the game:
 javac -cp "src/" src/*.java
 java -cp "src/" StartMenu
 
+[Screen Shot 2023-01-10 at 11.56.57 PM.pdf](https://github.com/cmsc389T-winter23/Team5/files/10388990/Screen.Shot.2023-01-10.at.11.56.57.PM.pdf)
+
 ```
 
 Functions
