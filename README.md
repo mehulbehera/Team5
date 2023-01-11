@@ -3,7 +3,7 @@ Project 1- Pacman
 Group Members: Sonia Sandler, Janaki Patel, Roshan Mathew
 
 Pacman screenshot:
-![screensho of the game](https://github.com/cmsc389T-winter23/Team5/files/10394659/Screen.Shot.2023-01-10.at.11.56.57.PM.pdf)
+![screenshot of the game](https://github.com/cmsc389T-winter23/Team5/files/10394659/Screen.Shot.2023-01-10.at.11.56.57.PM.pdf)
 
 Running the game:
 ``` java
