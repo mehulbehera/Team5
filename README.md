@@ -22,7 +22,7 @@ Ghost
 
 Map
 1. move(String name, Location loc, Type type)
-2. getLoc(Location loc)
+2. getLoc(Location loc) - This function checks the loc HashSet to find the corresponding type. If it is null, returns the emptySet else it returns the type. The test adds a ghost and a pacman and then asserts that the type at those locations correspond to what was put there.
 3. attack(String name) - this method is supposed to be called by the Ghost class when there is a successful attack. It updates gameOver to be true
 
 4. eatCookie(String Name)
