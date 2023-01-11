@@ -16,11 +16,7 @@ public class Ghost {
   }
 
   public boolean move() {
-    if get_valid_moves.isEmpty(){
-      return false;
-    }else{
-      return true;
-    }
+    return false;
   }
 
   public boolean is_pacman_in_range() {
