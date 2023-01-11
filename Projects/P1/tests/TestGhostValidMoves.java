@@ -1,11 +1,13 @@
 import java.io.*;
+import java.util.*;
 import junit.framework.*;
+import java.awt.*;
 
 public class TestGhostValidMoves extends TestCase {
 
   public void testGhostValidMoves() throws FileNotFoundException {
     //Creating A Map
-    Mainframe frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(4, 5), "name", Color.red); //Creates a red ghost named "name" at location x,y
@@ -25,7 +27,7 @@ public class TestGhostValidMoves extends TestCase {
 
   public void testGhostInvalidMoves() throws FileNotFoundException {
     //Creating A Map
-    Mainframe frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(4, 5), "name", Color.red); //Creates a red ghost named "name" at location x,y
