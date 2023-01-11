@@ -35,7 +35,7 @@ public class Ghost {
 	      return false;
     }else{
         myLoc = get_valid_moves().get(0);
-        myMap.move(myName, myLoc, Map.TYPE.GHOST);
+        myMap.move(myName, myLoc, Map.Type.GHOST);
         return true;
     }
 
