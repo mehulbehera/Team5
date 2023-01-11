@@ -9,7 +9,7 @@ Running the game:
 Functions
 Pacman:
 1. get_valid_moves()
-2. move()
+2. move() - This function uses get_valid_moves() and checks if it is empty. If it is it returns false and if it isn't it returns true. The test adds a ghost and pacman to the frame and asserts that the ghost has space to move.
 3. is_ghost_in_range()
 4. consume()
 
