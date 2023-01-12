@@ -4,6 +4,7 @@ on:
   push:
 
 jobs:
+
   compile:
     runs-on: ubuntu-latest
     container: openjdk
@@ -12,3 +13,21 @@ jobs:
       - uses: actions/checkout@v3
       - name: Compile Java Code
         run: javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
+        
+      - name: Compile Java Code and Run TestGhostMove
+        run: |
+          javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
+          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostMove
+          
+      - name: Compile Java Code and Run TestPacManMove
+        run: |
+          javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
+          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManMove
+          
+      - name: Compile Java Code and Run TestMapGetLoc
+        run: |
+          javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
+          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapGetLoc
+          
+
+
