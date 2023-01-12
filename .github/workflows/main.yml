@@ -17,16 +17,16 @@ jobs:
         run: |
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
           java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManValidMoves
-          working-directory: Projects/P1
+        working-directory: Projects/P1
           
-      - name: Compile Java Code and Run TesGhostValidMoves
+      - name: Compile Java Code and Run TestGhostValidMoves
         run: |
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
           java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostValidMoves
-          working-directory: Projects/P1
+        working-directory: Projects/P1
           
       - name: Compile Java Code and Run TestMapMove
         run: |
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
           java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapMove
-          working-directory: Projects/P1
+        working-directory: Projects/P1
