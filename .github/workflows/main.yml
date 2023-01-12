@@ -17,17 +17,17 @@ jobs:
       - name: Compile Java Code and Run TestMapAttack
         run: |
           javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapAttack
+          java -Djava.awt.headless=true -cp "junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapAttack
         working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestGhostInRange
         run: |
           javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostInRange
+          java -Djava.awt.headless=true -cp "junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostInRange
         working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestPacManInRange
         run: |
           javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
+          java -Djava.awt.headless=true -cp "junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
         working-directory: Projects/P1
