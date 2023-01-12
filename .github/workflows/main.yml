@@ -11,23 +11,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compile Java Code
-        run: javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+        run: javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
         working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestMapAttack
         run: |
-          javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -Djava.awt.headless=true -cp "junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapAttack
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapAttack
         working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestGhostInRange
         run: |
-          javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -Djava.awt.headless=true -cp "junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostInRange
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostInRange
         working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestPacManInRange
         run: |
-          javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
-          java -Djava.awt.headless=true -cp "junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
         working-directory: Projects/P1
