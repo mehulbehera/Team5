@@ -11,20 +11,23 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compile Java Code
-        run: javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
+        run: javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+        working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestMapAttack
         run: |
-          javac -cp "Projects/P1/tests/junit-4.10.jar:Projects/P1/src/:Projects/P1/tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore Projects/P1/tests/TestMapAttack
+          javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapAttack
+        working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestGhostInRange
         run: |
-          javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore Projects/P1/tests/TestGhostInRange
+          javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostInRange
+        working-directory: Projects/P1
 
       - name: Compile Java Code and Run TestPacManInRange
         run: |
-          javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
-          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore Projects/P1/tests/TestPacManInRange
-
+          javac -cp "junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
+        working-directory: Projects/P1
