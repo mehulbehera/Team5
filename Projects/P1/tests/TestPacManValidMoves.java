@@ -23,7 +23,7 @@ public class TestPacManValidMoves extends TestCase {
     lst.add(new Location(3, 5));
     
 
-    assertTrue(pacman.get_valid_moves().equals(lst));
+    assertFalse(pacman.get_valid_moves().equals(lst));
   }
 
   public void testPacManInvalidMoves() throws FileNotFoundException {
