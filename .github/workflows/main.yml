@@ -16,6 +16,24 @@ jobs:
         run: javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
         working-directory: Projects/P1
 
+      - name: Compile Java Code and Run TestGhostMove
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostMove
+        working-directory: Projects/P1
+
+      - name: Compile Java Code and Run TestPacManMove
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManMove
+        working-directory: Projects/P1
+
+      - name: Compile Java Code and Run TestMapGetLoc
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapGetLoc
+        working-directory: Projects/P1
+        
       - name: Compile Java Code and Run TestMapAttack
         run: |
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
@@ -33,3 +51,4 @@ jobs:
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
           java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
         working-directory: Projects/P1
+
