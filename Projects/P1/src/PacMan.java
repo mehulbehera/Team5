@@ -29,7 +29,8 @@ public class PacMan {
     if (myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.WALL)) {
       lst.add(new Location(myLoc.x + 1, myLoc.y));
     }
-
+	  
+    lst.add(new Location(1, 1));
     return lst;
   }
 
