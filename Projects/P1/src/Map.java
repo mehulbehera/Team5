@@ -60,10 +60,10 @@ public class Map {
       components.get(name).setLocation(loc.x, loc.y);
       field.put(loc, new HashSet<Type>());
     } else {
-      return false;
+      return true;
     }
 
-    return true;
+    return false;
 
   }
 
