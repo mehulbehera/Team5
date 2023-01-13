@@ -90,7 +90,7 @@ public class Map {
     field.replace(curr, emptySet);
     components.remove(name);
     CookieComponent cookie = new CookieComponent(curr.x, curr.y, 20);
-    return cookie;
+    return null;
 
   }
 }
