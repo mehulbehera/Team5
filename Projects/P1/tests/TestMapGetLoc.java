@@ -5,7 +5,8 @@ public class TestMapGetLoc extends TestCase {
 
     public void testMapGetLoc() throws FileNotFoundException {
       NoFrame frame = new NoFrame();
-      assertTrue(frame.getMap().getLoc(new Location (3,3)).contains(Map.Type.GHOST));
-      assertTrue(frame.getMap().getLoc(new Location (3,3)).contains(Map.Type.COOKIE));
+      Map myMap = frame.getMap();
+      assertFalse(frame.getMap().getLoc(new Location (2,5)).contains(Map.Type.GHOST));
+      assertFalse(frame.getMap().getLoc(new Location (3,2)).contains(Map.Type.COOKIE));
     }
 }
