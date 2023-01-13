@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Compile Java Code
+
         run: javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
         working-directory: Projects/P1
         
@@ -33,8 +34,7 @@ jobs:
           java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapMove
         working-directory: Projects/P1
 
-   
-
+ 
       - name: Compile Java Code and Run TestGhostMove
         run: |
           javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
@@ -71,4 +71,20 @@ jobs:
           java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManInRange
         working-directory: Projects/P1
 
+      - name: Compile Java Code and Run TestConsume
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestConsume
+        working-directory: Projects/P1
 
+      - name: Compile Java Code and Run TestAttack
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestAttack
+        working-directory: Projects/P1
+
+      - name: Compile Java Code and Run TestMapEatCookie
+        run: |
+          javac -cp "tests/junit-4.10.jar:src/:tests/" src/*.java tests/*.java
+          java -Djava.awt.headless=true -cp "tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapEatCookie
+        working-directory: Projects/P1
