@@ -71,7 +71,7 @@ public class Map {
     // wallSet and emptySet will help you write this method
     
    if (field.get(loc) == null){
-     return emptySet;
+     return wallSet;
    }else{
      return field.get(loc);
    }
