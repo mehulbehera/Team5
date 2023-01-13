@@ -14,16 +14,16 @@ public class Ghost {
   public ArrayList<Location> get_valid_moves() {
     ArrayList<Location> lst = new ArrayList<Location>();
     if (myMap.getLoc(new Location(myLoc.x, myLoc.y + 1)).contains(Map.Type.WALL)) {
-      lst.add(new Location(myLoc.x, myLoc.y + 1));
+      lst.add(new Location(myLoc.x, myLoc.y + 2));
     } 
     if (myMap.getLoc(new Location(myLoc.x, myLoc.y - 1)).contains(Map.Type.WALL)) {
-      lst.add(new Location(myLoc.x, myLoc.y - 1));
+      lst.add(new Location(myLoc.x, myLoc.y - 2));
     }
     if (myMap.getLoc(new Location(myLoc.x - 1, myLoc.y)).contains(Map.Type.WALL)) {
-      lst.add(new Location(myLoc.x - 1, myLoc.y));
+      lst.add(new Location(myLoc.x - 2, myLoc.y));
     }
     if (myMap.getLoc(new Location(myLoc.x + 1, myLoc.y)).contains(Map.Type.WALL)) {
-      lst.add(new Location(myLoc.x + 1, myLoc.y));
+      lst.add(new Location(myLoc.x + 2, myLoc.y));
     }
 
     return lst;
