@@ -60,26 +60,26 @@ public class Map {
       components.get(name).setLocation(loc.x, loc.y);
       field.put(loc, new HashSet<Type>());
     } else {
-      return false;
+      return true;
     }
 
-    return true;
+    return false;
 
   }
 
   public HashSet<Type> getLoc(Location loc) {
     // wallSet and emptySet will help you write this method
     
-   if (!field.containsKey(loc)){
-     return emptySet;
+   if (field.get(loc) == null){
+     return wallSet;
    }else{
      return field.get(loc);
    }
   }
 
   public boolean attack(String Name) {
-    gameOver = true;
-    return true;
+    gameOver = false;
+    return false;
   }
 
   public JComponent eatCookie(String name) {
@@ -90,7 +90,7 @@ public class Map {
     field.replace(curr, emptySet);
     components.remove(name);
     CookieComponent cookie = new CookieComponent(curr.x, curr.y, 20);
-    return cookie;
+    return null;
 
   }
 }
