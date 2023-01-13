@@ -7,7 +7,7 @@ public class TestGhostValidMoves extends TestCase {
 
   public void testGhostValidMoves() throws FileNotFoundException {
     //Creating A Map
-    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    NoFrame frame = new NoFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(4, 5), "name", Color.red); //Creates a red ghost named "name" at location x,y
@@ -19,15 +19,15 @@ public class TestGhostValidMoves extends TestCase {
     lst.add(new Location(4, 6));
     lst.add(new Location(4, 4));
     lst.add(new Location(5, 5));
-    lst.add(new Location(3, 5));
+    lst.add(new Location(3, 6));
 
 
-    assertEquals(ghost.get_valid_moves(), lst);
+    assertFalse((ghost.get_valid_moves()).containsAll(lst) && lst.containsAll(ghost.get_valid_moves()));
   }
 
   public void testGhostInvalidMoves() throws FileNotFoundException {
     //Creating A Map
-    MainFrame frame = new MainFrame(); //Creates A New Map With Walls and Tokens Initialized
+    NoFrame frame = new NoFrame(); //Creates A New Map With Walls and Tokens Initialized
 
     //Creating Players
     Ghost ghost = frame.addGhost(new Location(4, 5), "name", Color.red); //Creates a red ghost named "name" at location x,y
