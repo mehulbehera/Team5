@@ -18,16 +18,19 @@ jobs:
         run: |
           javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
           java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestGhostMove
+        working-directory: Projects/P1
           
       - name: Compile Java Code and Run TestPacManMove
         run: |
           javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
           java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestPacManMove
+        working-directory: Projects/P1
           
       - name: Compile Java Code and Run TestMapGetLoc
         run: |
           javac -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" Projects/P1/src/*.java Projects/P1/tests/*.java
           java -Djava.awt.headless=true -cp "Projects/P1/tests/junit-4.10.jar:src/:tests/" org.junit.runner.JUnitCore TestMapGetLoc
+        working-directory: Projects/P1
           
 
 
