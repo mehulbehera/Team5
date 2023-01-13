@@ -7,7 +7,7 @@ public class TestMapAttack extends TestCase {
 
   public void testMapAttack() throws FileNotFoundException {
     try {
-      MainFrame frame1 = new MainFrame();
+      NoFrame frame1 = new NoFrame();
       assertTrue(frame1.getMap().attack("clyde"));
       assertTrue(frame1.getMap().isGameOver());
 
