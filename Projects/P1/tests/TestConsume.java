@@ -24,7 +24,7 @@ public class TestConsume extends TestCase {
 		PacMan pacman = frame1.addPacMan(new Location(11, 9)); // Creates PacMan at location x, y
 	    Map.Type ghostType = Map.Type.GHOST;
 	    pacman.myMap.add("add ghost", new Location(11, 9), cookieComponent, ghostType);
-		assertNull(pacman.consume());
+		assertNotNull(pacman.consume());
 
 	}
 
