@@ -32,11 +32,11 @@ public class Ghost {
   public boolean move() {
 
     if (get_valid_moves().isEmpty()){
-	      return false;
+	      return true;
     }else{
         myLoc = get_valid_moves().get(0);
         myMap.move(myName, myLoc, Map.Type.GHOST);
-        return true;
+        return false;
     }
 
   }
